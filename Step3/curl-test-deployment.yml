@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: curl-test
+  name: curl-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: curl-test
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: curl-test
+    spec:
+      containers:
+      - image: amirint/curl-test
+        name: curl-test
+        command: ["bin/sleep"]
+        args: ["infinite"]
+        resources: {}
+status: {}

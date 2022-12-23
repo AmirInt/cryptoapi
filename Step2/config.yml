@@ -1,0 +1,5 @@
+api_base_url: "https://api.coingecko.com/api/v3/simple/price"
+default_cache_time: 300
+default_server_port: 5000
+redis_server: redis-service
+redis_port: 6379
